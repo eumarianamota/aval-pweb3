@@ -8,4 +8,4 @@ const handleClick = () => {
     mobileMenu.classList.toggle(activeClass)
 }
 
-mobileMenu.addEventListener("click", handleClick)
+mobileMenu.addEventListener("click", handleClick) 
