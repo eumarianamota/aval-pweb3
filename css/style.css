@@ -49,15 +49,23 @@ body {
 }
 
 .continents {
-    padding: 0 1rem;
-    padding-top: 5rem;
+    padding: 5rem 1rem;
+}
+
+.continents h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.continents-container {
     background-color: white;
 
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 10rem;
+    gap: 2rem;
 }
 
 .continent {
@@ -65,12 +73,12 @@ body {
     flex-direction: column;
     flex-direction: center;
     align-items: center;
+    border-radius: 1rem;
 }
 
 .img-container {
-    width: 90%;
+    max-width: 25rem;
     position: relative;
-    /* background-color: aqua; */
 }
 
 .continent img {
@@ -89,6 +97,14 @@ body {
     backdrop-filter: blur(5.6px);
 
     color: white;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.5rem;
     width: 100%; 
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+@media (min-width:900px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
 }
