@@ -127,6 +127,7 @@ nav {
     flex-direction: column;
     gap: 10px;
     padding: 1rem 5rem;
+    width: 25rem;
 }
 
 .hero form input {
@@ -206,15 +207,9 @@ nav {
 
     color: white;
     padding: 0.8rem 1.5rem;
-    padding-top: 16rem;
     width: 100%; 
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
-}
-
-.continent .description:hover {
-    background: rgba(15, 15, 15, 0.52);
-    backdrop-filter: filter(5.4px);
 }
 
 .continent .description h3 {
@@ -253,7 +248,7 @@ nav {
     color: white;
     padding: 4rem 1rem;
 
-    margin: 0 2rem 5rem;
+    margin: 0 2rem 2rem;
     border-radius: 4rem;
 
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -281,7 +276,7 @@ nav {
 }
 
 .card-team{
-    max-width: 15rem;
+    max-width: 10rem;
     transition: all 300ms ease;
 }
 
@@ -352,10 +347,6 @@ footer h3 {
         transform: translateX(0);
     }
 
-    .team {
-        margin: 0 10rem 5rem;
-    }
-
     footer {
         flex-direction: row;
         justify-content: center;
@@ -376,6 +367,14 @@ footer h3 {
 
     .hero form {
         width: 50rem;
+    }
+
+    .card-team {
+        max-width: 15rem;
+    }
+
+    .team {
+        margin: 0 10rem 5rem;
     }
 
 }
