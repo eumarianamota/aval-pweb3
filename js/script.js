@@ -73,3 +73,14 @@ async function fetchCountries(url) {
             spinner.style.display = "none";
         }
     }
+
+searchForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const query = searchInput.value.trim();
+    if (!query) {
+        alert("Digite o nome de um país");
+        return;
+    }
+
+    window.location.href = `/html/country.html?name=${encodeURIComponent(query)}`;
+});
