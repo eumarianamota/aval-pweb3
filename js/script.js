@@ -52,3 +52,23 @@ const spinner = document.getElementById("spinner");
 
 const loadFavorites = () => JSON.parse(localStorage.getItem("favorites")) || [];
 const saveFavorites = (favorites) => localStorage.setItem("favorites", JSON.stringify(favorites));
+
+async function fetchCountries(url) {
+    try{
+        spinner.style.display = "block";
+        const response = await fetch(url);
+
+        if (!response.ok) throw new Error("Erro na API");
+
+        const data = await response.json();
+        return data;
+
+    } catch (error) {
+        console.error("Erro ao buscar países:", error);
+        return [];
+    } finally {
+        spinner.style.display = "none"; 
+
+    }
+}
+
