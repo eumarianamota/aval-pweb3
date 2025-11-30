@@ -10,9 +10,8 @@ const handleClick = () => {
 
 mobileMenu.addEventListener("click", handleClick) 
 
-const buttons = document.querySelectorAll(".btn-redirect-page")
-
-buttons.forEach(button => {
+const continentButtons = document.querySelectorAll('.btn-redirect-page');
+continentButtons.forEach(button => {
     button.addEventListener('click', () => {
         const textButton = button.textContent.trim()
         let url = ""
@@ -43,32 +42,20 @@ buttons.forEach(button => {
     });
 });
 
-const API_URL = "https://restcountries.com/v3.1";
+   const API_URL = "https://restcountries.com/v3.1";
+    const searchForm = document.getElementById("search-form");
+    const searchInput = document.getElementById("search-input");
 
-const seacrchInput = document.getElementById("search-input");
-const continentFilter = document.getElementById("continent-filter");
-const countriesContainer = document.getElementById("countries-container");
-const spinner = document.getElementById("spinner");
-
-const loadFavorites = () => JSON.parse(localStorage.getItem("favorites")) || [];
-const saveFavorites = (favorites) => localStorage.setItem("favorites", JSON.stringify(favorites));
-
-async function fetchCountries(url) {
-    try{
-        spinner.style.display = "block";
-        const response = await fetch(url);
-
-        if (!response.ok) throw new Error("Erro na API");
-
-        const data = await response.json();
-        return data;
-
-    } catch (error) {
-        console.error("Erro ao buscar países:", error);
-        return [];
-    } finally {
-        spinner.style.display = "none"; 
-
+    let countriesContainer = document.getElementById("countries-container");
+    if (!countriesContainer) {
+        countriesContainer = document.createElement("section");
+        countriesContainer.id = "countries-container";
+        countriesContainer.classList.add("countries-container");
+        searchForm.parentNode.insertBefore(countriesContainer, searchForm.nextSibling);
     }
-}
 
+    const spinner = document.createElement("div");
+    spinner.id = "spinner";
+    spinner.textContent = "Carregando...";
+    spinner.style.display = "none";
+    countriesContainer.appendChild(spinner);
