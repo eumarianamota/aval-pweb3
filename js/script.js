@@ -38,11 +38,17 @@ buttons.forEach(button => {
                 break
         }
 
-        console.log('Valor final da variável url:', url)
+        if(url) window.location.href = url
+        
+    });
+});
 
-        if(url) {
-            console.log('Deu certo')
-            window.location.href = url
-        }
-    })
-})
+const API_URL = "https://restcountries.com/v3.1";
+
+const seacrchInput = document.getElementById("search-input");
+const continentFilter = document.getElementById("continent-filter");
+const countriesContainer = document.getElementById("countries-container");
+const spinner = document.getElementById("spinner");
+
+const loadFavorites = () => JSON.parse(localStorage.getItem("favorites")) || [];
+const saveFavorites = (favorites) => localStorage.setItem("favorites", JSON.stringify(favorites));
