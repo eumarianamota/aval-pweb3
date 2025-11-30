@@ -3,6 +3,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     const detailsContainer = document.getElementById("country-details");
     const spinner = document.createElement("div");
 
+    function loadFavorites() {
+        return JSON.parse(localStorage.getItem("favorites")) || [];
+    }
+
+    function saveFavorites(favorites) {
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+    }
+
     const params = new URLSearchParams(window.location.search);
     const countryName = params.get("name");
 
@@ -29,10 +37,28 @@ document.addEventListener("DOMContentLoaded", async () => {
             <p><strong>Línguas:</strong> ${languages}</p>
             <p><strong>Moedas:</strong> ${currecies}</p>
             <p><strong>Fronteiras:</strong> ${borders}</p>
+            
         `;
-    } catch (error) {
-        detailsContainer.innerHTML = `<p>Erro ao carregar os detalhes do país: ${error.message}</p>`;
-    } finally {
-        spinner.style.display = "none";
+
+        const addFavorite = document.getElementById("add-favorite");
+        addFavorite.addEventListener("click", () => {
+            const favorites = loadFavorites();
+            if (!favorites.find(fav => fav.name === country.name.common)) {
+                favorites.push({
+                    name: country.name.common,
+                    flag: country.flags.svg,
+                    capital: country.capital ? country.capital[0] : "N/A",
+                    region: country.region,
+                    population: country.population
+                });
+                saveFavorites(favorites);
+                alert(`${country.name.common} adicionado aos favoritos!`);
+            } else {
+                alert(`${country.name.common} já está nos favoritos.`);
+            }
+        });
+    }catch (error) {
+        console.error(error);
+        detailsContainer.innerHTML = "<p>Erro ao carregar os detalhes do país.</p>";
     }
 });
