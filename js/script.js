@@ -84,3 +84,47 @@ searchForm.addEventListener("submit", async (event) => {
 
     window.location.href = `/html/country.html?name=${encodeURIComponent(query)}`;
 });
+
+function loadFavorites() {
+    return JSON.parse(localStorage.getItem("favorites")) || [];
+}
+
+function saveFavorites(favorites) {
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+}
+
+function renderFavorites() {
+    const favoritesContainer = document.querySelector(".favorites-container");
+    const favorites = loadFavorites();
+
+    favoritesContainer.innerHTML = "";
+
+    if (favorites.length === 0) {
+        favoritesContainer.innerHTML = "<p>Nenhum favorito ainda.</p>";
+        return;
+    }
+
+    favorites.forEach(fav => {
+        const favDiv = document.createElement("div");
+        favDiv.classList.add("favorite");
+        favDiv.innerHTML = `
+            <div class="img-container">
+                <img src="${fav.flag}" alt="Bandeira de ${fav.name}" class="img-favorite-country">
+                <div class="description">
+                    <h3>${fav.name}</h3>
+                    <p><strong>Capital:</strong> ${fav.capital}</p>
+                    <p><strong>Região:</strong> ${fav.region}</p>
+                    <p><strong>População:</strong> ${fav.population.toLocaleString()}</p>
+                    <button class="btn-redirect-country-page">Explorar país</button>
+                </div>
+            </div>
+        `;
+        favoritesContainer.appendChild(favDiv);
+
+        favDiv.querySelector(".btn-redirect-country-page").addEventListener("click", () => {
+            window.location.href = `/html/country.html?name=${encodeURIComponent(fav.name)}`;
+        });
+    });
+}
+
+document.addEventListener("DOMContentLoaded", renderFavorites);
