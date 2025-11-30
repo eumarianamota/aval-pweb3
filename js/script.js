@@ -42,7 +42,7 @@ continentButtons.forEach(button => {
     });
 });
 
-   const API_URL = "https://restcountries.com/v3.1";
+const API_URL = "https://restcountries.com/v3.1";
     const searchForm = document.getElementById("search-form");
     const searchInput = document.getElementById("search-input");
 
@@ -59,3 +59,17 @@ continentButtons.forEach(button => {
     spinner.textContent = "Carregando...";
     spinner.style.display = "none";
     countriesContainer.appendChild(spinner);
+
+async function fetchCountries(url) {
+        try {
+            spinner.style.display = "block";
+            const response = await fetch(url);
+            if (!response.ok) throw new Error("Erro na API");
+            return await response.json();
+        } catch (error) {
+            console.error("Erro ao buscar países:", error);
+            return [];
+        } finally {
+            spinner.style.display = "none";
+        }
+    }
