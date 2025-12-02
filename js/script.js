@@ -82,7 +82,7 @@ searchForm.addEventListener("submit", async (event) => {
         return;
     }
 
-    window.location.href = `/html/country.html?name=${encodeURIComponent(query)}`;
+    window.location.href = `country.html?name=${encodeURIComponent(query)}`;
 });
 
 function loadFavorites() {
@@ -122,7 +122,7 @@ function renderFavorites() {
         favoritesContainer.appendChild(favDiv);
 
         favDiv.querySelector(".btn-redirect-country-page").addEventListener("click", () => {
-            window.location.href = `/html/country.html?name=${encodeURIComponent(fav.name)}`;
+            window.location.href = `country.html?name=${encodeURIComponent(fav.name)}`;
         });
     });
 }
