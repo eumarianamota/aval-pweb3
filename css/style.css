@@ -158,7 +158,7 @@ nav {
 
 .continents, 
 .favorites {
-    padding: 5rem 1rem 0 1rem;
+    padding: 6rem;
 }
 
 .continents h2, 
@@ -254,13 +254,10 @@ nav {
 
 /* ---------- TEAM ---------- */
 .team {
-    padding: 10rem 1rem 0 1rem;
+    padding: 6rem;
     background-color: rgb(85, 107, 47);
     color: white;
-
-    margin: 5rem 2rem 5rem 2rem;
     border-radius: 2rem;
-
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -282,7 +279,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 3rem;
+    gap: 8rem;
 }
 
 .card-team{
