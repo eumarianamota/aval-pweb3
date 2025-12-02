@@ -188,7 +188,6 @@ nav {
 .favorite {
     display: flex;
     flex-direction: column;
-    flex-direction: center;
     align-items: center;
     border-radius: 1rem;
     transition: all 300ms ease;
@@ -199,12 +198,16 @@ nav {
     transform: scale(1.04);
 }
 
+/* Container da imagem com overlay */
 .continent .img-container,
 .favorite .img-container {
     max-width: 25rem;
     position: relative;
+    overflow: hidden; /* garante que o overlay fique dentro da borda */
+    border-radius: 1rem; /* mantém a borda arredondada */
 }
 
+/* Imagem */
 .continent img, 
 .favorite img {
     width: 100%;
@@ -212,6 +215,26 @@ nav {
     border-radius: 1rem;
 }
 
+/* ███  OVERLAY — FUMAÇA  ███ */
+.continent .img-container::after,
+.favorite .img-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+
+    /* Gradiente tipo fumaça */
+    background: linear-gradient(
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.3) 40%,
+        rgba(0, 0, 0, 0.6) 100%
+    );
+
+    z-index: 1; /* fica atrás do texto */
+    pointer-events: none;
+}
+
+/* Texto sobre a imagem */
 .continent .description, 
 .favorite .description {
     position: absolute;
@@ -220,9 +243,11 @@ nav {
 
     color: white;
     padding: 0.8rem 1.5rem;
-    width: 100%; 
+    width: 100%;
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
+
+    z-index: 2; /* texto fica acima do overlay */
 }
 
 .continent .description h3, 
@@ -244,7 +269,7 @@ nav {
 
     background: rgba(126, 126, 126, 0.52);
     border: 1px solid rgb(200, 200, 200);
-    backdrop-filter: filter(5.4px);
+    backdrop-filter: blur(5.4px);
     color: white;
 
     font-size: 1.2rem;
@@ -256,6 +281,7 @@ nav {
     border: 1px solid rgb(200, 200, 200);
     color: white;
 }
+
 
 /* ---------- TEAM ---------- */
 .team {
