@@ -163,7 +163,7 @@ main {
   }
 
   .country-details img {
-    margin: 0 auto;
+    align-items: center;
   }
 }
 
