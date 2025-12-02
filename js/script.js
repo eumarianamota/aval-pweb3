@@ -18,22 +18,22 @@ continentButtons.forEach(button => {
 
         switch (textButton) {
             case 'Explorar América':
-                url = '/html/america.html'
+                url = 'america.html'
                 break
             case 'Explorar África': 
-                url = '/html/africa.html'
+                url = 'africa.html'
                 break
             case 'Explorar Antártida':
-                url = '/html/antartida.html'
+                url = 'antartida.html'
                 break
             case 'Explorar Ásia':
-                url = '/html/asia.html'
+                url = 'asia.html'
                 break
             case 'Explorar Europa':
-                url = '/html/europa.html'
+                url = 'europa.html'
                 break
             case 'Explorar Oceania': 
-                url = '/html/oceania.html'
+                url = 'oceania.html'
                 break
         }
 

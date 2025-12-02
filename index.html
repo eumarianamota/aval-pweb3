@@ -1,194 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Explore as maravilhas pelo mundo</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MundiView" />
+    <link rel="manifest" href="assets/site.webmanifest" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <div id="logo">
-                <img src="/assets/logo/logo-transparent.png" alt="logo mundiviews" />
-            </div>
+      <nav>
+        <div id="logo">
+          <img src="/assets/logo/logo-transparent.png" alt="logo mundiviews" />
+        </div>
 
-            <div id="mobile-menu" class="mobile-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
+        <div id="mobile-menu" class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
 
-            <ul id="nav-list" class="nav-list">
-                <li><a href="#hero">Início</a></li>
-                <li><a href="#continents">Continentes</a></li>
-                <li><a href="#team">Equipe</a></li>
-            </ul>
-        </nav>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="#hero">Início</a></li>
+          <li><a href="#continents">Continentes</a></li>
+          <li><a href="#team">Equipe</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <section id="hero" class="hero">
-            <h1>Explore as maravilhas expalhadas pelo mundo</h1>
+      <section id="hero" class="hero">
+        <h1>Explore as maravilhas expalhadas pelo mundo</h1>
 
-            <form id="search-form">
-                    <input type="text" id="search-input" placeholder="Pesquise por um país">
-                    <button type = "submit">Explorar</button>
-            </form>
-        </section >
-    
-        <section id="continents" class="continents">
-            <h2>Continentes</h2>
+        <form id="search-form">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Pesquise por um país"
+          />
+          <button type="submit">Explorar</button>
+        </form>
+      </section>
 
-            <div class="continents-container" >
-                <div class="continent">
-                    <div class="img-container">
-                        <img class="img-continent" src="/assets/icons/paisagem.jpg" alt="background">
+      <section id="continents" class="continents">
+        <h2>Continentes</h2>
 
-                        <div class="description">
-                            <h3>América</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, asperiores illum eius nostrum aut nisi veritatis fuga cupiditate perferendis dicta necessitatibus sequi, praesentium vel similique ipsum est dignissimos distinctio aspernatur?</p>
-                            <button class="btn-redirect-page" >Explorar América</button>
-                        </div>
-                    </div>
-                </div>
+        <div class="continents-container">
+          <div class="continent">
+            <div class="img-container">
+              <img
+                class="img-continent"
+                src="/assets/icons/paisagem.jpg"
+                alt="background"
+              />
 
-                <div class="continent">
-                        <div class="img-container">
-                            <img class="img-continent" src="/assets/icons/paisagem.jpg" alt="background">
-
-                            <div class="description">
-                            <h3>África</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, asperiores illum eius nostrum aut nisi veritatis fuga cupiditate perferendis dicta necessitatibus sequi, praesentium vel similique ipsum est dignissimos distinctio aspernatur?</p>
-                            <button class="btn-redirect-page">Explorar África</button>
-                        </div>
-                        </div>
-                </div>
-
-                <div class="continent">
-                        <div class="img-container">
-                            <img class="img-continent" src="/assets/icons/paisagem.jpg" alt="background">
-
-                            <div class="description">
-                            <h3>Europa</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, asperiores illum eius nostrum aut nisi veritatis fuga cupiditate perferendis dicta necessitatibus sequi, praesentium vel similique ipsum est dignissimos distinctio aspernatur?</p>
-                            <button class="btn-redirect-page">Explorar Europa</button>
-                        </div>
-                        </div>
-                </div>
-
-                <div class="continent">
-                        <div class="img-container">
-                            <img class="img-continent" src="/assets/icons/paisagem.jpg" alt="background">
-
-                            <div class="description">
-                            <h3>Ásia</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, asperiores illum eius nostrum aut nisi veritatis fuga cupiditate perferendis dicta necessitatibus sequi, praesentium vel similique ipsum est dignissimos distinctio aspernatur?</p>
-                            <button class="btn-redirect-page">Explorar Ásia</button>
-                        </div>
-                        </div>
-                </div>
-
-                <div class="continent">
-                        <div class="img-container">
-                            <img class="img-continent" src="/assets/icons/paisagem.jpg" alt="background">
-
-                            <div class="description">
-                            <h3>Antártida</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, asperiores illum eius nostrum aut nisi veritatis fuga cupiditate perferendis dicta necessitatibus sequi, praesentium vel similique ipsum est dignissimos distinctio aspernatur?</p>
-                            <button class="btn-redirect-page">Explorar Antártida</button>
-                        </div>
-                        </div>
-                </div>
-
-                <div class="continent">
-                        <div class="img-container">
-                            <img class="img-continent" src="/assets/icons/paisagem.jpg" alt="background">
-
-                            <div class="description">
-                            <h3>Oceania</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, asperiores illum eius nostrum aut nisi veritatis fuga cupiditate perferendis dicta necessitatibus sequi, praesentium vel similique ipsum est dignissimos distinctio aspernatur?</p>
-                            <button class="btn-redirect-page">Explorar Oceania</button>
-                        </div>
-                        </div>
-                </div>
+              <div class="description">
+                <h3>América</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Tempore, asperiores illum eius nostrum aut nisi veritatis fuga
+                  cupiditate perferendis dicta necessitatibus sequi, praesentium
+                  vel similique ipsum est dignissimos distinctio aspernatur?
+                </p>
+                <button class="btn-redirect-page">Explorar América</button>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <section class="favorites">
-            <h2>Favoritos</h2>
+          <div class="continent">
+            <div class="img-container">
+              <img
+                class="img-continent"
+                src="/assets/icons/paisagem.jpg"
+                alt="background"
+              />
 
-            <div class="favorites-container">
-                <div class="favorite">
-                    <div class="img-container">
-                        <img src="assets/icons/paisagem.jpg" alt="Paisagem do país" class="img-favorite-country">
-
-                    <div class="description">
-                        <h3>Brasil</h3>
-                        <button class="btn-redirect-country-page" >Explorar país</button>
-                    </div>
-
-                    </div>
-                </div>
-
-                <div class="favorite">
-                    <div class="img-container">
-                        <img src="assets/icons/paisagem.jpg" alt="Paisagem do país" class="img-favorite-country">
-
-                    <div class="description">
-                        <h3>Brasil</h3>
-                        <button class="btn-redirect-country-page" >Explorar país</button>
-                    </div>
-
-                    </div>
-                </div>
+              <div class="description">
+                <h3>África</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Tempore, asperiores illum eius nostrum aut nisi veritatis fuga
+                  cupiditate perferendis dicta necessitatibus sequi, praesentium
+                  vel similique ipsum est dignissimos distinctio aspernatur?
+                </p>
+                <button class="btn-redirect-page">Explorar África</button>
+              </div>
             </div>
+          </div>
 
-            
-        </section>
+          <div class="continent">
+            <div class="img-container">
+              <img
+                class="img-continent"
+                src="/assets/icons/paisagem.jpg"
+                alt="background"
+              />
 
-        <section id="team" class="team">
-            <div class="title-team">
-                <h2>Equipe</h2>
-                <p>Projeto desenvolvido por alunos do curso de Desenvolvimento Web</p>
+              <div class="description">
+                <h3>Europa</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Tempore, asperiores illum eius nostrum aut nisi veritatis fuga
+                  cupiditate perferendis dicta necessitatibus sequi, praesentium
+                  vel similique ipsum est dignissimos distinctio aspernatur?
+                </p>
+                <button class="btn-redirect-page">Explorar Europa</button>
+              </div>
             </div>
+          </div>
 
-            <div class="team-container">
-                <div class="card-team">
-                    <div class="card-img"><img src="/assets/team/img-mariana.png" alt="Dev 1"></div>
-                    <h2>Mariana da Mota Pinho</h2>
-                    <h5>Sistemas da computação - UESPI</h5>
-                </div>
+          <div class="continent">
+            <div class="img-container">
+              <img
+                class="img-continent"
+                src="/assets/icons/paisagem.jpg"
+                alt="background"
+              />
 
-                <div class="card-team">
-                    <div class="card-img"><img src="/assets/team/img-rita.png" alt="Dev 2"></div>
-                    <h2>Maria Rita Lustosa da Silva Nascimento</h2>
-                    <h5>Ciência da computação - UESPI</h5>
-                </div>
-
-                <div class="card-team">
-                    <div class="card-img"><img src="/assets/team/img-marcelo.jpeg" alt="Dev 3"></div>
-                    <h2>João Marcello Machado Braz</h2>
-                    <h5>Ciência da Computação - UESPI</h5>
-                </div>
+              <div class="description">
+                <h3>Ásia</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Tempore, asperiores illum eius nostrum aut nisi veritatis fuga
+                  cupiditate perferendis dicta necessitatibus sequi, praesentium
+                  vel similique ipsum est dignissimos distinctio aspernatur?
+                </p>
+                <button class="btn-redirect-page">Explorar Ásia</button>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <footer>
-            <div class="description">
-                <h3>Descrição</h3>
-                <p>Uma aplicação web desenvolvida para explorar filmes e séries usando a API REST Countries</p>
-            </div>
+          <div class="continent">
+            <div class="img-container">
+              <img
+                class="img-continent"
+                src="/assets/icons/paisagem.jpg"
+                alt="background"
+              />
 
-            <div class="collaborators">
-                <h3>Autores</h3>
-                <p>João Marcello</p>
-                <p>Mariana Pinho</p>
-                <p>Maria Rita</p>
+              <div class="description">
+                <h3>Antártida</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Tempore, asperiores illum eius nostrum aut nisi veritatis fuga
+                  cupiditate perferendis dicta necessitatibus sequi, praesentium
+                  vel similique ipsum est dignissimos distinctio aspernatur?
+                </p>
+                <button class="btn-redirect-page">Explorar Antártida</button>
+              </div>
             </div>
-        </footer>
+          </div>
+
+          <div class="continent">
+            <div class="img-container">
+              <img
+                class="img-continent"
+                src="/assets/icons/paisagem.jpg"
+                alt="background"
+              />
+
+              <div class="description">
+                <h3>Oceania</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Tempore, asperiores illum eius nostrum aut nisi veritatis fuga
+                  cupiditate perferendis dicta necessitatibus sequi, praesentium
+                  vel similique ipsum est dignissimos distinctio aspernatur?
+                </p>
+                <button class="btn-redirect-page">Explorar Oceania</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="favorites">
+        <h2>Favoritos</h2>
+
+        <div class="favorites-container">
+          <div class="favorite">
+            <div class="img-container">
+              <img
+                src="assets/icons/paisagem.jpg"
+                alt="Paisagem do país"
+                class="img-favorite-country"
+              />
+
+              <div class="description">
+                <h3>Brasil</h3>
+                <button class="btn-redirect-country-page">Explorar país</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="favorite">
+            <div class="img-container">
+              <img
+                src="assets/icons/paisagem.jpg"
+                alt="Paisagem do país"
+                class="img-favorite-country"
+              />
+
+              <div class="description">
+                <h3>Brasil</h3>
+                <button class="btn-redirect-country-page">Explorar país</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" class="team">
+        <div class="title-team">
+          <h2>Equipe</h2>
+          <p>Projeto desenvolvido por alunos do curso de Desenvolvimento Web</p>
+        </div>
+
+        <div class="team-container">
+          <div class="card-team">
+            <div class="card-img">
+              <img src="/assets/team/img-mariana.png" alt="Dev 1" />
+            </div>
+            <h2>Mariana da Mota Pinho</h2>
+            <h5>Sistemas da computação - UESPI</h5>
+          </div>
+
+          <div class="card-team">
+            <div class="card-img">
+              <img src="/assets/team/img-rita.png" alt="Dev 2" />
+            </div>
+            <h2>Maria Rita Lustosa da Silva Nascimento</h2>
+            <h5>Ciência da computação - UESPI</h5>
+          </div>
+
+          <div class="card-team">
+            <div class="card-img">
+              <img src="/assets/team/img-marcelo.jpeg" alt="Dev 3" />
+            </div>
+            <h2>João Marcello Machado Braz</h2>
+            <h5>Ciência da Computação - UESPI</h5>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="description">
+          <h3>Descrição</h3>
+          <p>
+            Uma aplicação web desenvolvida para explorar filmes e séries usando
+            a API REST Countries
+          </p>
+        </div>
+
+        <div class="collaborators">
+          <h3>Autores</h3>
+          <p>João Marcello</p>
+          <p>Mariana Pinho</p>
+          <p>Maria Rita</p>
+        </div>
+      </footer>
     </main>
 
     <script src="/js/script.js"></script>
-</body>
+  </body>
 </html>
