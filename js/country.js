@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             <p><strong>Línguas:</strong> ${languages}</p>
             <p><strong>Moedas:</strong> ${currecies}</p>
             <p><strong>Fronteiras:</strong> ${borders}</p>
-            <button id="add-favorite">Adicionar aos Favoritos</button>
+            <button class="fav-button" id="add-favorite">Adicionar aos Favoritos</button>
         `;
 
         const addFavorite = document.getElementById("add-favorite");
