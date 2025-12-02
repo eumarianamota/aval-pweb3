@@ -198,24 +198,24 @@ nav {
     transform: scale(1.04);
 }
 
-/* Container da imagem com overlay */
 .continent .img-container,
 .favorite .img-container {
     max-width: 25rem;
+    height: 24rem;
     position: relative;
-    overflow: hidden; /* garante que o overlay fique dentro da borda */
-    border-radius: 1rem; /* mantém a borda arredondada */
+    overflow: hidden; 
+    border-radius: 1rem; 
 }
 
 /* Imagem */
 .continent img, 
 .favorite img {
     width: 100%;
+    height: 100%;  
     object-fit: cover; 
     border-radius: 1rem;
 }
 
-/* ███  OVERLAY — FUMAÇA  ███ */
 .continent .img-container::after,
 .favorite .img-container::after {
     content: "";
@@ -223,18 +223,16 @@ nav {
     inset: 0;
     border-radius: inherit;
 
-    /* Gradiente tipo fumaça */
     background: linear-gradient(
         rgba(0, 0, 0, 0) 0%,
         rgba(0, 0, 0, 0.3) 40%,
         rgba(0, 0, 0, 0.6) 100%
     );
 
-    z-index: 1; /* fica atrás do texto */
+    z-index: 1; 
     pointer-events: none;
 }
 
-/* Texto sobre a imagem */
 .continent .description, 
 .favorite .description {
     position: absolute;
@@ -247,7 +245,7 @@ nav {
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
 
-    z-index: 2; /* texto fica acima do overlay */
+    z-index: 2; 
 }
 
 .continent .description h3, 
