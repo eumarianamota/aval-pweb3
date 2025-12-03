@@ -393,9 +393,6 @@ footer h3 {
 
     footer .description, footer .collaborators {
         max-width: 40%;
-        justify-content: center;
-        align-items: center;
-        display: flex;
     }
 
 }
