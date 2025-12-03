@@ -7,10 +7,14 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+
 }
 
 /* ------- HEADER ------- */
@@ -207,7 +211,6 @@ nav {
     border-radius: 1rem; 
 }
 
-/* Imagem */
 .continent img, 
 .favorite img {
     width: 100%;
@@ -337,7 +340,6 @@ nav {
     font-size: 0.9rem;  
 } 
 
-/* ---------- FOOTER ---------- */
 footer {
     background-color: darkolivegreen;
     color: white;
@@ -386,11 +388,14 @@ footer h3 {
     footer {
         flex-direction: row;
         justify-content: center;
-        gap: 5rem;
+        gap: 2rem;
     }
 
     footer .description, footer .collaborators {
         max-width: 40%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
     }
 
 }
@@ -413,4 +418,67 @@ footer h3 {
         margin: 0 10rem 5rem;
     }
 
+}
+
+
+@media (max-width: 480px) {
+
+    .team {
+        padding: 2rem;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+        margin: 2rem;
+    }
+
+    .title-team h2 {
+        font-size: 1.8rem;
+    }
+
+    .title-team p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .team-container {
+        gap: 2rem;
+    }
+
+    .card-team {
+        max-width: 8rem;
+    }
+
+    .card-team h2 {
+        font-size: 1.1rem;
+    }
+
+    .card-team h5 {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .team {
+        padding: 3rem 2rem;
+    }
+
+    .team-container {
+        gap: 4rem;
+    }
+
+    .card-team {
+        max-width: 9rem;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    
+    .team-container {
+        gap: 5rem;
+    }
+
+    .card-team {
+        max-width: 10rem;
+    }
 }
