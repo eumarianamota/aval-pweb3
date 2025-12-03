@@ -482,3 +482,73 @@ footer h3 {
         max-width: 10rem;
     }
 }
+
+
+@media (max-width: 480px) {
+
+    .continents,
+    .favorites {
+        padding: 2rem 1rem;
+    }
+
+    .continents h2,
+    .favorites h2 {
+        font-size: 2rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .continents-container,
+    .favorites-container {
+        gap: 1.5rem;
+    }
+
+    .continent .img-container,
+    .favorite .img-container {
+        max-width: 100%;
+        height: 20rem;
+        border-radius: 0.8rem;
+    }
+
+    .continent .description h3,
+    .favorite .description h3 {
+        font-size: 1.4rem;
+    }
+
+    .continent .description p {
+        font-size: 0.95rem;
+    }
+
+    .continent .description button,
+    .favorite .description button {
+        width: 100%;
+        padding: 0.6rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .continents,
+    .favorites {
+        padding: 3rem 2rem;
+    }
+
+    .continent .img-container,
+    .favorite .img-container {
+        max-width: 22rem;
+        height: 24rem;
+    }
+
+    .continent .description h3,
+    .favorite .description h3 {
+        font-size: 1.4rem;
+    }
+
+    .continent .description button,
+    .favorite .description button {
+        font-size: 1.1rem;
+    }
+}
+
+
+
